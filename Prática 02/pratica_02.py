@@ -12,7 +12,6 @@ import graph_functions
 # Código da função 1:
 def is_trail(graph, valid_ride):
            
-    # Testa se nao tem nenhuma aresta repetida
     for edge in valid_ride:
         if type(edge) == tuple:
             inverse_edge = (edge[1] , edge[0])
@@ -50,7 +49,8 @@ graph = {"a" : ['b', 'c'],
          "f" : ['c', 'd', 'g'],
          "g" : ['e', 'f']
         }
-       
+
+'''Falta testar com esse grafo.'''       
 graph2 = {"1" : ['2'],
           "2" : ['1', '3'],
           "3" : ['2', '4'],
@@ -59,17 +59,17 @@ graph2 = {"1" : ['2'],
  
    
 ''' Realizando testes com as duas formas de representação de passeios válidos '''
-valid_ride1 = ['ac','cf','fd'] # true
-valid_ride2 = ['ed','df','fg','ge','ed']# false
-valid_ride3 = ['ed','df','fg','ge','eb','ba'] # true
-valid_ride4 = ['ed','df','fg','ge','eb','ba','ac','cf'] # true
-valid_ride5 = [] # true
+valid_ride1 = ['ac','cf','fd']
+valid_ride2 = ['ed','df','fg','ge','ed']
+valid_ride3 = ['ed','df','fg','ge','eb','ba']
+valid_ride4 = ['ed','df','fg','ge','eb','ba','ac','cf']
+valid_ride5 = []
  
-valid_ride6 = [('a','c'),('c','f'),('f','d')] # true
-valid_ride7 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','d')]# false
-valid_ride8 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','b'),('b','a')] # true
-valid_ride9 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','b'),('b','a'),('a','c'),('c','f')] # true
-valid_ride10 = [] # true
+valid_ride6 = [('a','c'),('c','f'),('f','d')]
+valid_ride7 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','d')]
+valid_ride8 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','b'),('b','a')]
+valid_ride9 = [('e','d'),('d','f'),('f','g'),('g','e'),('e','b'),('b','a'),('a','c'),('c','f')]
+valid_ride10 = []
 
    
 # Testes função 01:            
